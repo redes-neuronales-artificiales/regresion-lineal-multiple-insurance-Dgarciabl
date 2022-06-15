@@ -109,7 +109,7 @@ def pregunta_03():
             (
                 "linearRegression",
                 LinearRegression(),
-            )
+            ),
         ],
     )
 
