@@ -103,11 +103,13 @@ def pregunta_03():
                 "selectKBest",
                 SelectKBest(score_func = f_regression),
             ),
+
             # Paso 3: Construya un modelo de regresión lineal.
+
             (
                 "linearRegression",
                 LinearRegression(),
-            ),
+            )
         ],
     )
 
