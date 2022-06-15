@@ -63,6 +63,7 @@ def pregunta_03():
     Especificación del pipeline y entrenamiento
     -------------------------------------------------------------------------------------
     """
+    from xml.etree.ElementTree import PI
 
     # Importe make_column_selector
     # Importe make_column_transformer
