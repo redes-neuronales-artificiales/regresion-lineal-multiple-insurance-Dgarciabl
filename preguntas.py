@@ -112,13 +112,15 @@ def pregunta_03():
     )
 
     # Cargua de las variables.
-    X_train, _, y_train, _ = pregunta_02()
+    X_train, X_test, y_train, y_test = pregunta_02()
 
     # Defina un diccionario de parámetros para el GridSearchCV. Se deben
     # considerar valores desde 1 hasta 11 regresores para el modelo
     param_grid = {
         "linearRegression__fit_intercept": list(range(1,12)),
     }
+
+    from sklearn.metrics import mean_squared_error
 
     # Defina una instancia de GridSearchCV con el pipeline y el diccionario de
     # parámetros. Use cv = 5, y como métrica de evaluación el valor negativo del
