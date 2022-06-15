@@ -74,6 +74,7 @@ def pregunta_03():
     # Importe OneHotEncoder
     from sklearn.compose import make_column_selector
     from sklearn.compose import make_column_transformer
+    from sklearn.compose import ColumnTransformer
     from sklearn.feature_selection import SelectKBest
     from sklearn.feature_selection import f_regression
     from sklearn.linear_model import LinearRegression
@@ -89,10 +90,10 @@ def pregunta_03():
             (
                 "column_transfomer",
                 make_column_transformer(
-                    (
+                    [(
                         OneHotEncoder(),
                         make_column_selector(dtype_include=object),
-                    ),
+                    )],
                     remainder = 'passthrough',
                 ),
             ),
